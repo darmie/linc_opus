@@ -1,5 +1,6 @@
 The MIT License (MIT)
 
+Copyright (c) 2021 Damilare Akinlaja
 Copyright (c) 2015 Sven Bergström   
 Copyright (c) 2015 snõwkit contributors
 

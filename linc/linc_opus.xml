@@ -6,10 +6,10 @@
 
         <!-- add files and flags to the haxe c++ build -->
 
-        <compilerflag value='-I${LINC_EMPTY_PATH}/linc/'/>
-        <compilerflag value='-DEMPTY_EXAMPLE_DEFINE_FOR_THE_CPP_CODE'/>
+        <compilerflag value='-I${LINC_OPUS_PATH}/linc/'/>
+        <!-- <compilerflag value='-DEMPTY_EXAMPLE_DEFINE_FOR_THE_CPP_CODE'/> -->
 
-        <file name='${LINC_EMPTY_PATH}linc/linc_empty.cpp' />
+        <file name='${LINC_OPUS_PATH}linc/linc_opus.cpp' />
 
     </files>
 

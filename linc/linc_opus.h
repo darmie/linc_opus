@@ -10,9 +10,9 @@
 
 namespace linc {
 
-    namespace empty {
+    namespace opus {
 
-        extern int example();
+        // extern int example();
 
     } //empty namespace
 
