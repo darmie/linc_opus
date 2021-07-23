@@ -6,7 +6,7 @@
 #endif
 
 //include other library includes as needed
-// #include "../lib/____"
+#include "../lib/opus/include/opus.h"
 
 namespace linc {
 
