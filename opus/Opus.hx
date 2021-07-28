@@ -2,6 +2,7 @@ package opus;
 
 import cpp.UInt8;
 import cpp.RawPointer;
+import cpp.Pointer;
 
 /** No error @hideinitializer*/
 final OPUS_OK = 0;
@@ -125,7 +126,7 @@ extern class Opus {
     public static function get_bandwidth(data:RawPointer<UInt8>):Int;
 
     @:native("opus_packet_get_samples_per_frame")
-    public static packet_get_samples_per_frame(data:RawPointer<UInt8>, Fs:Int):Int;
+    public static function packet_get_samples_per_frame(data:RawPointer<UInt8>, Fs:Int):Int;
 
     @:native("opus_packet_get_nb_channels")
     public static function packet_get_nb_channels(data:RawPointer<UInt8>):Int;
@@ -233,7 +234,7 @@ extern class OpusVal16{}
 @:native("StereoWidthState")
 extern class StereoWidthState{
     public var XX:OpusVal32;
-    public var  XY:OpusVal32
+    public var  XY:OpusVal32;
     public var YY:OpusVal32;
     public var smoothed_width:OpusVal16;
     public var max_follower:OpusVal16;
@@ -316,7 +317,9 @@ extern class OpusMSDecoder {
 @:include("opus_private.h")
 extern class TMappingType {}
 
-extern enum abstract(TMappingType) from TMappingType to TMappingType {
+@:keep
+@:include("opus_private.h")
+extern enum abstract MappingType(TMappingType) from TMappingType to TMappingType {
 	@:native("MAPPING_TYPE_NONE")
 	public final MAPPING_TYPE_NONE:TMappingType;
 	@:native("MAPPING_TYPE_SURROUND")
