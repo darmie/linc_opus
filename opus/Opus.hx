@@ -291,6 +291,9 @@ extern class OpusMultistream {
 	public static function decode_float(st:Pointer<OpusMSDecoder>, data:cpp.RawPointer<UInt8>, len:Int, pcm:cpp.RawPointer<Float>, frame_size:Int,
 		decode_fec:Int):Int;
 
+    @:native("opus_multistream_decoder_ctl")
+    public static function decoder_ctl(st:Pointer<OpusMSDecoder>, request:Int):Int;
+
 	@:native("opus_multistream_decoder_destroy")
 	public static function decoder_destroy(st:Pointer<OpusMSDecoder>):Void;
 }
